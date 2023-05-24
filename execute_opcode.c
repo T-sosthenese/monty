@@ -17,7 +17,7 @@ void execute_opcode(stack_t **stack, char *str, unsigned int line_number)
 
 	if (!strcmp(str, "stack"))
 	{
-		global.data_struct = 1;
+		global.data_structure = 1;
 		return;
 	}
 	while (op_code[j].opcode)
