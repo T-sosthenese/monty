@@ -3,6 +3,22 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#define INSTRUCTIONS
+	{
+		{"push", push},
+		    {"pall", pall},
+		    {"pint", pint},
+		    {"pop", pop},
+		    {"swap", swap},
+		    {"nop", nop},
+		    {"add", add},
+		{
+			NULL, NULL
+		}
+	}
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -41,5 +57,6 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
+void execute_opcode(stack_t **stack, char *str, unsigned int line_number);
 
 #endif /* MONTY_H */
