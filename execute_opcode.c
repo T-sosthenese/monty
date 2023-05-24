@@ -20,6 +20,11 @@ void execute_opcode(stack_t **stack, char *str, unsigned int line_number)
 		global.data_structure = 1;
 		return;
 	}
+	if (!strcmp(str, "queue"))
+	{
+		global.data_structure = 0;
+		return;
+	}
 	while (op_code[j].opcode)
 	{
 		if (strcmp(op_code[j].opcode, str) == 0)
