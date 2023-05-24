@@ -77,5 +77,6 @@ int are_digits(char *str);
 int are_numbers(char *s);
 void file_err(char *argv);
 void err_application(void);
+void _freestack(stack_t *stack);
 
 #endif /* MONTY_H */
