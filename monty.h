@@ -75,5 +75,7 @@ void execute_opcode(stack_t **stack, char *str, unsigned int line_number);
 
 int are_digits(char *str);
 int are_numbers(char *s);
+void file_err(char *argv);
+void err_application(void);
 
 #endif /* MONTY_H */
