@@ -50,6 +50,20 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct search_s - searches for the current opcode
+ * @data_structure: stacking mode, default stack and queue
+ * @arg: arguments passed in form of a string
+ *
+ * Description: a global data structure used to loop through opcodes
+ */
+typedef struct search_s
+{
+	int data_structure;
+	char *arg;
+} search_t;
+search_t global;
+
 void push(stack_t **stack, int value);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
@@ -58,5 +72,8 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void execute_opcode(stack_t **stack, char *str, unsigned int line_number);
+
+int are_digits(char *str);
+int are_numbers(char *s);
 
 #endif /* MONTY_H */
