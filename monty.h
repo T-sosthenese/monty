@@ -19,6 +19,7 @@
 	{"div", _division}, \
 	{"mul", _multiplication}, \
 	{"mod", _modulus}, \
+	{"pchar", _pchar}, \
 	{ \
 		NULL, NULL \
 	} \
@@ -90,6 +91,8 @@ int are_numbers(char *s);
 void file_err(char *argv);
 void err_application(void);
 void _freestack(stack_t *stack);
+/* string and character operations */
+void _pchar(stack_t **stack, unsigned int line_number);
 
 /* Linked lists utilities */
 stack_t *_nodequeue(stack_t **stack, const int n);
