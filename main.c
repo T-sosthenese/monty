@@ -1,5 +1,5 @@
-#include "monty.h"
 #define _POSIX_C_SOURCE 200809L
+#include "monty.h"
 /**
  * main - checks the program
  * @argv: argument vector of arguments passed to the program
