@@ -62,7 +62,7 @@ stack_t *_addnode(stack_t **stack, const int n)
 	new_node->n = n;
 	new_node->next = *stack;
 	new_node->prev = NULL;
-	if (!*stack)
+	if (*stack)
 		(*stack)->prev = new_node;
 
 	*stack = new_node;
