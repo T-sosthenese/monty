@@ -6,19 +6,19 @@
 #include <string.h>
 #include <ctype.h>
 
-#define INSTRUCTIONS
-	{
-		{"push", push},
-		    {"pall", pall},
-		    {"pint", pint},
-		    {"pop", pop},
-		    {"swap", swap},
-		    {"nop", nop},
-		    {"add", add},
-		{
-			NULL, NULL
-		}
-	}
+#define INSTRUCTIONS \
+{ \
+	{"push", push}, \
+	{"pall", pall}, \
+	{"pint", pint}, \
+	{"pop", pop}, \
+	{"swap", swap}, \
+	{"nop", nop}, \
+	{"add", add}, \
+	{ \
+		NULL, NULL \
+	} \
+}
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
