@@ -17,6 +17,7 @@
 	{"add", add}, \
 	{"sub", sub}, \
 	{"div", _division}, \
+	{"mul", _multiplication}, \
 	{ \
 		NULL, NULL \
 	} \
@@ -79,6 +80,7 @@ size_t stack_printing(const stack_t *stack);
 /* Advanced tasks */
 void sub(stack_t **stack, unsigned int line_number);
 void _division(stack_t **stack, unsigned int line_number);
+void _multiplication(stack_t **stack, unsigned int line_number);
 
 /* function utils */
 int are_digits(char *str);
