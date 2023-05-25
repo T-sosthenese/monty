@@ -80,4 +80,8 @@ void file_err(char *argv);
 void err_application(void);
 void _freestack(stack_t *stack);
 
+/* Linked lists utilities */
+stack_t *_nodequeue(stack_t **stack, const int m);
+stack_t *_addnode(stack_t **stack, const int m);
+
 #endif /* MONTY_H */
