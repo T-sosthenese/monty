@@ -72,6 +72,7 @@ void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void execute_opcode(stack_t **stack, char *str, unsigned int line_number);
+size_t stack_printing(const stack_t *stack);
 
 int are_digits(char *str);
 int are_numbers(char *s);
