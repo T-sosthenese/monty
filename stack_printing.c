@@ -12,7 +12,7 @@ size_t stack_printing(const stack_t *stack)
 	size_t elem = 0;
 
 	if (stack == NULL)
-		return;
+		exit(EXIT_FAILURE);
 
 	while (stack != NULL)
 	{
