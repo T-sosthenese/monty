@@ -64,7 +64,7 @@ typedef struct search_s
 } search_t;
 search_t global;
 
-void push(stack_t **stack, int value);
+void push(stack_t **stack, unsigned int value);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
