@@ -20,7 +20,6 @@
 	{"mul", _multiplication}, \
 	{"mod", _modulus}, \
 	{"pchar", _pchar}, \
-	{"pstr", _pstr}, \
 	{ \
 		NULL, NULL \
 	} \
@@ -94,7 +93,6 @@ void err_application(void);
 void _freestack(stack_t *stack);
 /* string and character operations */
 void _pchar(stack_t **stack, unsigned int line_number);
-void _pstr(stack_t **stack, unsigned int line_number);
 
 /* Linked lists utilities */
 stack_t *_nodequeue(stack_t **stack, const int n);
