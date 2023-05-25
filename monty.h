@@ -81,7 +81,7 @@ void err_application(void);
 void _freestack(stack_t *stack);
 
 /* Linked lists utilities */
-stack_t *_nodequeue(stack_t **stack, const int m);
-stack_t *_addnode(stack_t **stack, const int m);
+stack_t *_nodequeue(stack_t **stack, const int n);
+stack_t *_addnode(stack_t **stack, const int n);
 
 #endif /* MONTY_H */
