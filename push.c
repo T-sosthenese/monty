@@ -10,24 +10,25 @@
 
 void push(stack_t **stack, unsigned int value)
 {
-	stack_t *new_node = malloc(sizeof(stack_t));
+	char *m = global.arg;
 
-	if (new_node == NULL)
+	if ((are_digits(m)) == 0)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
+		fprintf(stderr, "L%d: usage: push integer\n", value);
 		exit(EXIT_FAILURE);
 	}
-	new_node->n = value;
-	new_node->prev = NULL;
-
-	if (*stack == NULL)
+	if (global.data_structure == 1)
 	{
-		new_node->next = NULL;
+		if (!_addnode(stack, atoi(global.arg)))
+		{
+			exit(EXIT_FAILURE);
+		}
 	}
 	else
 	{
-		new_node->next = *stack;
-		(*stack)->prev = new_node;
+		if (!_nodequeue(stack, atoi(global.arg)))
+		{
+			exit(EXIT_FAILURE);
+		}
 	}
-	*stack = new_node;
 }
